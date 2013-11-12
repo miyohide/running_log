@@ -21,6 +21,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'httparty'
 gem 'nike'
 gem 'googlecharts'
 
