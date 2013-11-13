@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131112134152) do
+ActiveRecord::Schema.define(version: 20131113125740) do
 
   create_table "runlogs", force: true do |t|
-    t.time     "start_time"
+    t.datetime "start_time"
     t.float    "distance"
     t.integer  "duration"
     t.float    "pace"
