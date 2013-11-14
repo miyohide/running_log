@@ -1,2 +1,19 @@
 <h1>Runlogs#index</h1>
-<p>Find me in app/views/runlogs/index.html.erb</p>
+<table>
+   <thead>
+      <tr>
+         <th>スタート時間</th>
+         <th>距離</th>
+         <th>時間</th>
+      </tr>
+   </thead>
+   <tbody>
+      <% @runlogs.each do |runlog| %>
+         <tr>
+            <td><%= runlog.start_time.in_time_zone('Tokyo') %></td>
+            <td><%= number_with_precision(runlog.distance) %></td>
+            <td><%= duration_to_hms(runlog.duration) %></td>
+         </tr>
+      <% end %>
+   </tbody>
+</table>
