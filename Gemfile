@@ -25,3 +25,7 @@ gem 'httparty'
 gem 'nike'
 gem 'googlecharts'
 
+group :test do
+   gem 'minitest-rails'
+end
+
