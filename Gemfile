@@ -23,7 +23,9 @@ end
 
 gem 'httparty'
 gem 'nike'
-gem 'googlecharts'
+#gem 'googlecharts'
+
+gem 'lazy_high_charts'
 
 group :test do
    gem 'minitest-rails'
