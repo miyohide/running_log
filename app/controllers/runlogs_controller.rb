@@ -9,6 +9,11 @@ class RunlogsController < ApplicationController
          f.title(text: "Running log: distance v.s. pace")
          f.xAxis(title: { text: 'distance(km)'} )
          f.yAxis(max: 500, title: { text: 'pace(seconds/km)'})
+         f.legend(layout: 'vertical',
+                  align: 'right',
+                  verticalAligh: 'top',
+                  x: -100, y: -250,
+                  floating: true)
 
          runlogs_year_group.keys.each do |year|
             year_data = runlogs_year_group[year].map do |runlog|
