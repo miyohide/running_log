@@ -7,7 +7,8 @@ class RunlogsController < ApplicationController
       @chart = LazyHighCharts::HighChart.new("Runlogs") do |f|
          f.chart(type: "scatter")
          f.title(text: "Running log: distance v.s. pace")
-         f.yAxis(max: 500)
+         f.xAxis(title: { text: 'distance(km)'} )
+         f.yAxis(max: 500, title: { text: 'pace(seconds/km)'})
 
          runlogs_year_group.keys.each do |year|
             year_data = runlogs_year_group[year].map do |runlog|
