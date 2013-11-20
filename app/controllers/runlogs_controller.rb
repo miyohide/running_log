@@ -2,7 +2,7 @@ class RunlogsController < ApplicationController
    def index
       @runlogs = Runlog.order(:start_time)
 
-      runlogs_year_group = @runlogs.group_by { |runlog| runlog.start_time.year }
+      runlogs_year_group = Runlog.group_by_year
 
       @chart = LazyHighCharts::HighChart.new("Runlogs") do |f|
          f.chart(type: "scatter")
