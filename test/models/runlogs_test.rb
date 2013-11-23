@@ -40,5 +40,9 @@ describe Runlog do
       end
    end
 
-
+   describe "#pace" do
+      subject { Runlog.new(distance: 2, duration: 1000) }
+      # pace = ( duration / 1000 ) / distance
+      it { subject.pace.must_equal 0.5 }
+   end
 end
